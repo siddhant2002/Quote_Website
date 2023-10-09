@@ -1,6 +1,8 @@
 let quotes = document.getElementById("quotes");
 let author = document.getElementById("author");
 let btn = document.getElementById("btn");
+let tweetMe = document.getElementById("tweetMe");
+
 let realdata = "";
 let quotesdata = "";
 
@@ -19,6 +21,11 @@ const getNewQuotes = () => {
     }
 };
 
+const tweetNow = () => {
+    let tweetPost = `https://twitter.com/intent/tweet?text=${quotesdata.text}`;
+    window.open(tweetPost);
+}
+
 const getQuotes = async() => {
     const api="https://type.fit/api/quotes";
     try
@@ -35,4 +42,5 @@ const getQuotes = async() => {
 };
 
 btn.addEventListener("click", getNewQuotes);
+tweetMe.addEventListener("click", tweetNow);
 getQuotes();
