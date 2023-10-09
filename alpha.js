@@ -13,16 +13,16 @@ const getNewQuotes = () => {
     quotes.innerHTML=`${quotesdata.text}`;
     if(quotesdata.author == null || quotesdata.author.localeCompare("type.fit") == 0)
     {
-        author.innerHTML="unKnown";
+        author.innerHTML = "unKnown";
     }
     else
     {
-        author.innerHTML=`${quotesdata.author.split(",")[0]}`;
+        author.innerHTML = `By ${quotesdata.author.split(",")[0]}`;
     }
 };
 
 const tweetNow = () => {
-    let tweetPost = `https://twitter.com/intent/tweet?text=${quotesdata.text} ${quotesdata.author.split(",")[0]}`;
+    let tweetPost = `https://twitter.com/intent/tweet?text=${quotesdata.text}. "\n" By ${quotesdata.author.split(",")[0]}`;
     window.open(tweetPost);
 }
 
