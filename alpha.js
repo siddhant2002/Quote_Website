@@ -13,7 +13,7 @@ const getNewQuotes = () => {
     quotes.innerHTML=`${quotesdata.text}`;
     if(quotesdata.author == null || quotesdata.author.localeCompare("type.fit") == 0)
     {
-        author.innerHTML = "unKnown";
+        author.innerHTML = "By unKnown";
     }
     else
     {
@@ -22,7 +22,7 @@ const getNewQuotes = () => {
 };
 
 const tweetNow = () => {
-    let tweetPost = `https://twitter.com/intent/tweet?text=${quotesdata.text}. "\n" By ${quotesdata.author.split(",")[0]}`;
+    let tweetPost = `https://twitter.com/intent/tweet?text=${quotesdata.text}. \n By ${quotesdata.author.split(",")[0]}`;
     window.open(tweetPost);
 }
 

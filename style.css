@@ -13,6 +13,11 @@
      left: 0;
  }
 
+
+ #btn {
+    cursor: pointer;
+ }
+
  .inner {
      height: 80vh;
      width: 60vw;
@@ -52,6 +57,7 @@
      padding: 5px;
      transform: rotate(-45deg);
      animation: rotweet 1s linear;
+     cursor: pointer;
  }
 
  @keyframes rotweet {
@@ -91,6 +97,7 @@
      font-size: 18px;
      text-transform: capitalize;
      color: #fff;
+     cursor: pointer;
  }
 
  .button {
