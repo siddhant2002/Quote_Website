@@ -22,7 +22,7 @@ const getNewQuotes = () => {
 };
 
 const tweetNow = () => {
-    let tweetPost = `https://twitter.com/intent/tweet?text=${quotesdata.text}`;
+    let tweetPost = `https://twitter.com/intent/tweet?text=${quotesdata.text} ${quotesdata.author.split(",")[0]}`;
     window.open(tweetPost);
 }
 
